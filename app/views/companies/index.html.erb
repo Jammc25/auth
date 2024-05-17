@@ -1,5 +1,7 @@
 <h1>My CRM</h1>
  
+ <% if @current_user %>
+   
  <ul>
    <% for company in @companies %>
     <li>
@@ -9,3 +11,6 @@
 </ul>
 
 <p><a href="/companies/new">Create a new company</a></p>
+<%else %>
+<h1>Get lost!!!</h1>
+<% end%>
